@@ -256,7 +256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Misil Divisor
+  m_Text: Otra Hablity
 --- !u!222 &128468157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ RectTransform:
   m_GameObject: {fileID: 176103660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86172, y: 0.86172, z: 0.86172}
   m_Children:
   - {fileID: 128468155}
   m_Father: {fileID: 1580768883}
@@ -301,7 +301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275.3, y: -241.6}
+  m_AnchoredPosition: {x: 190.6, y: -172.2}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176103662
@@ -346,18 +346,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 176103663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 502140835}
-        m_MethodName: OnButtonPress
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &176103663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +564,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Misil Divisor
+  m_Text: Otra Hablity
 --- !u!222 &322563230
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -612,7 +601,7 @@ RectTransform:
   m_GameObject: {fileID: 466019683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86172, y: 0.86172, z: 0.86172}
   m_Children:
   - {fileID: 1152618754}
   m_Father: {fileID: 1580768883}
@@ -620,7 +609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: -241.6}
+  m_AnchoredPosition: {x: 77.45599, y: -172.2}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &466019685
@@ -758,6 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   misil: {fileID: 5204853920543282661, guid: 86a0ad73acf96cb44806c3bc6464eec1, type: 3}
+  collider: {fileID: 1847441661}
 --- !u!1 &638344793
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +776,7 @@ RectTransform:
   m_GameObject: {fileID: 638344793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86172, y: 0.86172, z: 0.86172}
   m_Children:
   - {fileID: 322563228}
   m_Father: {fileID: 1580768883}
@@ -794,7 +784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210, y: -241.6}
+  m_AnchoredPosition: {x: 134.32999, y: -172.2}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638344795
@@ -839,18 +829,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 638344796}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 502140835}
-        m_MethodName: OnButtonPress
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &638344796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,7 +1067,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.27, y: 1.78, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1847441662}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1286,7 +1266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Misil Divisor
+  m_Text: Otra Hablity
 --- !u!222 &950557132
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1652,6 +1632,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1847441660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1847441662}
+  - component: {fileID: 1847441661}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: collider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1847441661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847441660}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!4 &1847441662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847441660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 779681352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987652328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,7 +1704,7 @@ RectTransform:
   m_GameObject: {fileID: 1987652328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86172, y: 0.86172, z: 0.86172}
   m_Children:
   - {fileID: 950557130}
   m_Father: {fileID: 1580768883}
@@ -1688,7 +1712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 343.1, y: -241.6}
+  m_AnchoredPosition: {x: 249.01999, y: -172.2}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987652330
@@ -1733,18 +1757,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1987652331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 502140835}
-        m_MethodName: OnButtonPress
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1987652331
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,12 +5,13 @@ using UnityEngine;
 public class HabilitiesManager : MonoBehaviour
 {
     public GameObject misil;
+    public BoxCollider collider;
 
-    void Update(){
+    /*void Update(){
         if(Input.GetKeyUp(KeyCode.Q)){
             crearMisil();
         }
-    }
+    }*/
 
     public void OnButtonPress(){
         crearMisil();
@@ -18,5 +19,10 @@ public class HabilitiesManager : MonoBehaviour
 
     void crearMisil(){
         Instantiate(misil, transform.position, transform.rotation);
+
+        collider = GameObject.Find("Collider").GetComponent<BoxCollider>();
+
+        collider.enabled = true;
+
     }
 }

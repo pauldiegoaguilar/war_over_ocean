@@ -7,13 +7,16 @@ public class MisilDivisorBehavior : MonoBehaviour
 {
 
     public Transform target;
+    private GameObject _boton;
     Vector3 direction;
-    float speed = 20;
-    float rotationSpedd = 5;
+    float speed = 20f;
+    float rotationSpedd = 5f;
 
     void Start() {
         target = GameObject.Find("Barco 2").transform;
-        transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 7f, ForceMode.Impulse);
+        _boton = GameObject.Find("Button");
+        //transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 7f, ForceMode.Impulse);
+        transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 15f, ForceMode.VelocityChange);
     }
 
     void Update() {
@@ -31,7 +34,11 @@ public class MisilDivisorBehavior : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-        if(col.CompareTag("Player")){
+        if(col.CompareTag("collider")){
+
+            Debug.Log("Me dividi epicamente"); //divide();
+            
+            _boton.SetActive(false);
             Destroy(gameObject);
         }
     }
