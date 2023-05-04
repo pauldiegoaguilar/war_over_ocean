@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class clickBarco : MonoBehaviour
 {
+
     public GameObject barcos;
+    public GameObject boton;
     int cantBarcos;
     private GameObject[] barco;
+
+    public Material texturaNormal;
+
+    public Material texturaDestruida;
     void Start()
     {
         cantBarcos = barcos.transform.childCount;
@@ -20,7 +26,6 @@ public class clickBarco : MonoBehaviour
     }
     void Update()
     {
-        for(int i = 0; )
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -30,14 +35,21 @@ public class clickBarco : MonoBehaviour
             {
                 if (hit.transform.IsChildOf(transform))
                 {
-                    //Debug.Log("Objeto clickeado: " + hit.transform.name);
                     if (hit.transform.CompareTag("destruido"))
                     {
-                        Debug.Log("este barco esta destruido");
+                        Debug.Log("este barco se reparo");
+                        hit.transform.tag = "normal";
+                        hit.transform.GetComponent<Renderer>().material = texturaNormal;
+                        barcos.GetComponent<clickBarco>().enabled = false;
+                        boton.gameObject.SetActive(false);
+
+                    }
+                    else if (hit.transform.CompareTag("normal"))
+                    {
+                        Debug.Log("Este barco no esta destruido");
                     }
                 }
             }
         }
     }
-
 }
