@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/escudo.unity
+=======
+- path: Assets/Scenes/regenerar.unity
+>>>>>>> feature/h-regenerar
   isLoaded: 1
   isActive: 1
   isSubScene: 0
