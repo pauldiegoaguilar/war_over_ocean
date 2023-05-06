@@ -1,13 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/Scenes/escudo.unity
-=======
 - path: Assets/Scenes/regenerar.unity
->>>>>>> feature/h-regenerar
-=======
-- path: Assets/Scenes/MisilDivisor.unity
->>>>>>> feature/h-misilDivisor
   isLoaded: 1
   isActive: 1
   isSubScene: 0
