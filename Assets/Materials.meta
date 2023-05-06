@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7b112c42a9685834696f756b1865e2dd
+=======
+guid: d9f1a77c57aff374e9f2e613ec781213
+>>>>>>> feature/h-misilDivisor
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
