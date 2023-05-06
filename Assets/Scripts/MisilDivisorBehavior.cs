@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class MisilDivisorBehavior : MonoBehaviour
-{
+public class MisilDivisorBehavior : MonoBehaviour {
 
     public Transform target;
-    private GameObject _boton;
+    private GameObject _button;
     Vector3 direction;
     float speed = 20f;
-    float rotationSpedd = 5f;
+    float rotationSpedd = 4f;
 
     void Start() {
         target = GameObject.Find("Barco 2").transform;
-        _boton = GameObject.Find("Button");
-        //transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 7f, ForceMode.Impulse);
-        transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 15f, ForceMode.VelocityChange);
+        _button = GameObject.Find("Button");
+        transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 14f, ForceMode.VelocityChange);
     }
 
     void Update() {
@@ -34,12 +32,20 @@ public class MisilDivisorBehavior : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-        if(col.CompareTag("collider")){
-
-            Debug.Log("Me dividi epicamente"); //divide();
-            
-            _boton.SetActive(false);
+        /*if(col.CompareTag("Player")){
             Destroy(gameObject);
+        }*/
+
+        if(col.CompareTag("Collider")){
+
+            Debug.Log("Me dividi epicamente");
+            /*for (int i = 0; i < 9; i++) {
+                GameObject divMisil = GameObject.Instantiate(gameObject, transform.position, transform.rotation);
+                divMisil.transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 10f, ForceMode.Impulse);
+            }*/
+            _button.SetActive(false);
+            Destroy(gameObject);
+            // Crea 9 más y optiene las pocisiones de cada bloque que rodea al elegido al principio para ir ahi.
         }
     }
 
