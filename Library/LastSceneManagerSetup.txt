@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/SampleScene.unity
-=======
 - path: Assets/Scenes/regenerar.unity
->>>>>>> 63dc83820e51b572be2ba275723392d1cc957f9f
   isLoaded: 1
   isActive: 1
   isSubScene: 0
