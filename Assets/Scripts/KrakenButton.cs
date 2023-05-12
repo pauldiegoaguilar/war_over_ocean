@@ -18,36 +18,34 @@ public class KrakenButton : MonoBehaviour
 
     public void OnPress(){
         
+        hability.interactable = false;
+
         if(shipIndex < 6){
 
             Transform ship = ships.transform.GetChild(shipIndex); //Almaceno barco
             int partsA = ship.transform.childCount;
-        
 
             if(cellIndex < partsA){
                 
                 if(ship.gameObject.tag != "destruido"){ //Si el barco no esta destruido...
-                    Debug.Log(cellIndex);
+                 
                     Transform shipPart = ship.transform.GetChild(cellIndex); //Almaceno "casilla"
-                    Debug.Log(shipPart.gameObject.name);
 
                     if(shipPart.gameObject.tag != "destruido"){ //Si esta parte no fue bombardeada...
-
+                      
                         shipPart.gameObject.tag = "destruido"; //Cambio nombre de etiqueta, indicando que la parte fue destruida
-                        
+                        ++cellIndex;
+                        return;
                     }
                     else{
-                        cellIndex = cellIndex + 1;
-                        Debug.Log(cellIndex);
+                        Debug.Log("siguiente");
+                        ++cellIndex;
                         OnPress();
+                        return;
                     }
-
-                }
-                cellIndex = cellIndex + 1;
-                Debug.Log(cellIndex);
-                return;     
+                }     
             }
-
+         
             ++shipIndex;
             cellIndex = 0;
             ship.gameObject.tag = "destruido";
