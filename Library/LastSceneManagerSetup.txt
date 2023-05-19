@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/tentaculos.unity
+- path: Assets/Scenes/gridSystem.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
