@@ -40,7 +40,6 @@
      <Compile Include="Assets\Scripts\InputManager.cs" />
      <Compile Include="Assets\Scripts\KrakenButton.cs" />
      <Compile Include="Assets\Scripts\MisilDivisorBehavior.cs" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\PlacementSystem.cs" />
      <Compile Include="Assets\Scripts\characterController.cs" />
      <Compile Include="Assets\Scripts\contador.cs" />
@@ -600,9 +599,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
         <HintPath>C:\Users\Alumno\Documents\war_over_ocean\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\Alumno\Documents\war_over_ocean\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>C:\Users\Alumno\Documents\war_over_ocean\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
