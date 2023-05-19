@@ -8,20 +8,12 @@ public class verifBarco : MonoBehaviour
     public Material materialNormal;
     public Material materialDestruido;
     public Material materialEscudo;
-    public float duracionEscudo = 60f;
-    private float tiempoActual;
-    private string[] verifEscudo;
-    private int autoIncrementar;
+    private int cantBarco;
+    public GameObject contadorScript;
     void Start()
     {
-        autoIncrementar = 0;
-        foreach(Transform ship in ships.transform){
-            verifEscudo[autoIncrementar] = ship.name;
-            autoIncrementar++;
-        }
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
         foreach(Transform ship in ships.transform){
@@ -34,26 +26,13 @@ public class verifBarco : MonoBehaviour
                     break;
                 case("escudo"):
                     ship.GetComponent<Renderer>().material = materialEscudo;
-                    StartCoroutine(ContarTiempo(ship.transform));
+                    if(ship.Find("contador(Clone)") == null){
+                        Instantiate(contadorScript.GetComponent<contador>(), ship);
+                    }
                     break;
                 default:
                     break;
             }
         }
-    }
-    IEnumerator ContarTiempo(Transform ship)
-    {
-        tiempoActual = duracionEscudo;
-        
-
-        while(tiempoActual > 0f)
-        {
-            Debug.Log(ship.tag);
-            yield return new WaitForSeconds(1f);
-            tiempoActual--;
-            Debug.Log("Tiempo restante del escudo: " + tiempoActual);
-        }
-
-        Debug.Log("Tiempo terminado");
     }
 }
