@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/escudo.unity
+=======
+- path: Assets/Scenes/misil.unity
+>>>>>>> c0c8008c7f8980f5d98b483dc7f0b255a62132dd
   isLoaded: 1
   isActive: 1
   isSubScene: 0
