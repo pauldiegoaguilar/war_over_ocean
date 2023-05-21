@@ -13,7 +13,7 @@ public class MisilDivisorBehavior : MonoBehaviour {
 
     void Start() {
         target = GameObject.Find("Barco 2").transform;
-        _button = GameObject.Find("Button");
+        _button = GameObject.Find("MisilDivisorButton");
         transform.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 14f, ForceMode.VelocityChange);
     }
 

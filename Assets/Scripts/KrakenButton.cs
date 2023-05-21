@@ -16,9 +16,13 @@ public class KrakenButton : MonoBehaviour
         cellIndex = 0;
     }
 
+    // hacer que evalue si tiene escudo el barco (no las partes, el barco) y que en caso detecte un barco con escudo se
+    // lo saltee pero que guarde su posicion para que al final lo intente destruir. 
+
+
     public void OnPress(){
         
-        hability.interactable = false;
+        //hability.interactable = false;
 
         if(shipIndex < 6){
 
