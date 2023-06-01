@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Collider
+  - normal
+  - escudo
+  - destruido
   layers:
   - Default
   - TransparentFX
