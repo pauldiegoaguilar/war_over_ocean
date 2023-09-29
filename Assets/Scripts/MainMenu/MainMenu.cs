@@ -25,6 +25,10 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+
+        password.contentType = TMP_InputField.ContentType.Password;
+        password.ForceLabelUpdate();
+
         connectButton.onClick.AddListener(() =>
         {
             connectButtonText.text = "CONNECTING...";
@@ -47,6 +51,8 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
+            connectButtonText.text = "INVALID DATA";
+            yield return new WaitForSeconds(2);
             connectButtonText.text = "CONNECT";
         }
     }
