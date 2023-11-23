@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -32,28 +34,47 @@ public class MainMenu : MonoBehaviour
         connectButton.onClick.AddListener(() =>
         {
             connectButtonText.text = "CONNECTING...";
-            StartCoroutine(Login());
+            StartCoroutine(Login(username.text, password.text));
         });
     }
 
-    IEnumerator Login()
+    IEnumerator Login(string userVal, string passVal)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
-        // Lo cambiare por el login real
-        if (username.text == validUsername && password.text == validPassword)
+        WWWForm form = new WWWForm();
+        form.AddField("userPOST", userVal);
+        form.AddField("passPOST", passVal);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/atomic-studios-woo/includes/gameFiles/login.php", form))
         {
-            nextButton.SetActive(true);
-            intruction.SetActive(true);
-            connectButtonText.text = "CONNECT";
-            LoginUI.SetActive(false);
-            WelcomeMsg.SetActive(true);
-        }
-        else
-        {
-            connectButtonText.text = "INVALID DATA";
-            yield return new WaitForSeconds(2);
-            connectButtonText.text = "CONNECT";
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.Log(www.error);
+                connectButtonText.text = "CONNECTION ERROR";
+                yield return new WaitForSeconds(2);
+                connectButtonText.text = "CONNECT";
+            }
+            else
+            {
+                if (Convert.ToInt32(www.downloadHandler.text) > 0)
+                {
+                    Debug.Log("Form upload complete!");
+                    nextButton.SetActive(true);
+                    intruction.SetActive(true);
+                    connectButtonText.text = "CONNECT";
+                    LoginUI.SetActive(false);
+                    WelcomeMsg.SetActive(true);
+                }
+                else
+                {
+                    connectButtonText.text = "INVALID DATA";
+                    yield return new WaitForSeconds(2);
+                    connectButtonText.text = "CONNECT";
+                }
+            }
         }
     }
 
