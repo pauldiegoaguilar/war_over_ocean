@@ -7,18 +7,18 @@ public class GeneralUI : MonoBehaviour
 {
     public static GeneralUI Instance { get; private set; }
 
-    [SerializeField] private Button partidasButton;
+    //[SerializeField] private Button partidasButton;
     [SerializeField] private Button salirBtn;
 
     private void Awake()
     {
         Instance = this;
 
-        partidasButton.onClick.AddListener(() =>
+        /*partidasButton.onClick.AddListener(() =>
         {
             Hide();
             PartidasUI.Instance.Show();
-        });
+        });*/
 
         salirBtn.onClick.AddListener(() =>
         {
@@ -27,7 +27,7 @@ public class GeneralUI : MonoBehaviour
         });
     }
 
-    public void Hide()
+    /*public void Hide()
     {
         gameObject.SetActive(false);
     }
@@ -35,5 +35,5 @@ public class GeneralUI : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
-    }
+    }*/
 }

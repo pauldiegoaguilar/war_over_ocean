@@ -29,9 +29,9 @@ public class MainUI : MonoBehaviour
 
         atrasBtn.onClick.AddListener(() =>
         {
+            GeneralBack.Instance.Hide();
             PartidasUI.Instance.Hide();
-            GeneralUI.Instance.Show();
-            //Debug.Log("Retrocediste, sigues en la cabina pero ya no estas en el apartado de partidas");
+            //GeneralUI.Instance.Show();
         });
     }
 

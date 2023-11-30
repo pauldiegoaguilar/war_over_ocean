@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PartidasUI : MonoBehaviour
+public class GeneralBack : MonoBehaviour
 {
-    public static PartidasUI Instance { get; private set; }
-
+    public static GeneralBack Instance { get; private set; }
 
     private void Awake()
     {

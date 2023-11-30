@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     [Header("Menu UI")]
     [SerializeField] private GameObject WelcomeMsg;
     [SerializeField] private GameObject nextButton;
-    [SerializeField] private GameObject intruction;
+    [SerializeField] private GameObject otherOptions;
 
     [Header("Login Data Sample")]
     public string validUsername = "zikario123";
@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
 
         connectButton.onClick.AddListener(() =>
         {
-            connectButtonText.text = "CONNECTING...";
+            connectButtonText.text = "CONECTANDOSE...";
             StartCoroutine(Login(username.text, password.text));
         });
     }
@@ -53,26 +53,27 @@ public class MainMenu : MonoBehaviour
             if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
             {
                 Debug.Log(www.error);
-                connectButtonText.text = "CONNECTION ERROR";
+                connectButtonText.text = "ERROR DE CONEXION";
                 yield return new WaitForSeconds(2);
-                connectButtonText.text = "CONNECT";
+                connectButtonText.text = "CONECTARSE";
             }
             else
             {
                 if (Convert.ToInt32(www.downloadHandler.text) > 0)
                 {
-                    Debug.Log("Form upload complete!");
-                    nextButton.SetActive(true);
-                    intruction.SetActive(true);
-                    connectButtonText.text = "CONNECT";
+                    Debug.Log("formulario completado");
+                    connectButtonText.text = "INGRESANDO...";
+                    yield return new WaitForSeconds(2);
                     LoginUI.SetActive(false);
+                    nextButton.SetActive(true);
+                    otherOptions.SetActive(true);
                     WelcomeMsg.SetActive(true);
                 }
                 else
                 {
-                    connectButtonText.text = "INVALID DATA";
+                    connectButtonText.text = "DATOS INCORRECTOS";
                     yield return new WaitForSeconds(2);
-                    connectButtonText.text = "CONNECT";
+                    connectButtonText.text = "CONECTARSE";
                 }
             }
         }
